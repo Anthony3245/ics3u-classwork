@@ -4,9 +4,9 @@ print("There are 11 girls, so that means..")
 print(f"there are {33 - 11} boys.")
 print()
 #printed text including the round()function rounding 11 divided by 33 to two decimals places
-print(f"That means {round((11 / 33),2)}% are girls...")
+print(f"That means {round((11 / 33 * 100) ,2)}% are girls...")
 #printed text including the percentage round()function rounded the number to two decimals
-print(f"and {round(((33-11)/33),2)} % are boys.")
+print(f"and {round(((33-11)/33 *100),2)} % are boys.")
 print()
 print("If we made groups of six...")
 # prints (33//6 divides 33 by 6 then rounds it to the nearest interger = 5
