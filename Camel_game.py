@@ -1,3 +1,4 @@
+
 import random
 
 
@@ -27,9 +28,12 @@ while not done:
     print(f"\nWeather condition: {weather}")
     if weather == "sandstorm":
         print("A sandstorm is slowing you down!")
+        miles -= 3
     elif weather == "heatwave":
         print("It's extremely hot, your camel is tiring quickly!")
         camel_tiredness += random.randint(1, 3)
+    else: 
+        print("It seems like a calm day today!")
 
 
     print("")
@@ -108,13 +112,15 @@ while not done:
         camel_tiredness = 0
 
 
-    # Random encounters
+    # Random merchant encounter 
     if random.randint(1, 15) == 1:
         print("You encounter a merchant!")
-        choice = input("Do you want to trade? (Y/N): ").strip().upper()
+        choice = input("Do you want to trade 1 health for 2 canteens of water? (Y/N): ").strip().upper()
         if choice == "Y":
-            print("You traded some water for a magical map!")
-            drinks_in_canteen += 1
+            print("You traded 1 health for 2 canteens of water")
+            health -= 1 
+            drinks_in_canteen += 2
+
 
 
     # Thirst checks
